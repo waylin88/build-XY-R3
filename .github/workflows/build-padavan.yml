@@ -95,7 +95,7 @@ jobs:
         #sed -i '/自定义项/d' .config
         #echo "自定义项=y" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_AUDIO/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_UVC/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_IPSET/d' .config
