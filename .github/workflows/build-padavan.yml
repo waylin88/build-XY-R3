@@ -95,10 +95,14 @@ jobs:
         #sed -i '/自定义项/d' .config
         #echo "自定义项=y" >> .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_AUDIO/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_UVC/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_IPSET/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD36/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_FTPD/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_SFTP/d' .config
         #########################################################################################
         sudo ./clear_tree
         sudo ./build_firmware_modify $TNAME 0
