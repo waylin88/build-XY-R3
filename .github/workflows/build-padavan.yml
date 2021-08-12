@@ -101,6 +101,7 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EXE/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_XUPNPD/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW/d' .config
         #########################################################################################
         sudo ./clear_tree
         sudo ./build_firmware_modify $TNAME 0
