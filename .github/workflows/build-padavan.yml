@@ -38,7 +38,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: OYE-001
+        TNAME: K2P-5.0
       run: |
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
@@ -73,8 +73,8 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_SSSERVER=n" >> .config #SS server
         echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >> .config #DNSFORWARDER
         echo "CONFIG_FIRMWARE_INCLUDE_ADBYBY=n" >> .config #adbyby plus+
-        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> .config #内网穿透FRPC
-        echo "CONFIG_FIRMWARE_INCLUDE_FRPS=n" >> .config #内网穿透FRPS
+        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=n" >> .config #内网穿透FRPC
+        echo "CONFIG_FIRMWARE_INCLUDE_FRPS=y" >> .config #内网穿透FRPS
         echo "CONFIG_FIRMWARE_INCLUDE_TUNSAFE=n" >> .config #TUNSAFE
         echo "CONFIG_FIRMWARE_INCLUDE_ALIDDNS=n" >> .config #阿里DDNS
         echo "CONFIG_FIRMWARE_INCLUDE_SMARTDNS=y" >> .config #smartdns
@@ -94,28 +94,6 @@ jobs:
         #格式如下：
         #sed -i '/自定义项/d' .config
         #echo "自定义项=y" >> .config
-        # 以下为小娱R3精简
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ARIA_WEB_CONTROL/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_AUDIO/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_UVC/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD36/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_FTPD/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SFTP/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_EAP_PEAP/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSH/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_XUPNPD/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW/d' .config
-        sed -i '/CONFIG_FIRMWARE_ENABLE_FUSE/d' .config
-        sed -i '/CONFIG_FIRMWARE_ENABLE_EXT4/d' .config
-        sed -i '/CONFIG_FIRMWARE_ENABLE_EXT3/d' .config
-        sed -i '/CONFIG_FIRMWARE_ENABLE_EXT2/d' .config
-        sed -i '/CONFIG_FIRMWARE_ENABLE_EXFAT/d' .config
-        sed -i '/CONFIG_FIRMWARE_ENABLE_FAT/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_ANTFS/d' .config
-        sed -i '/CONFIG_FIRMWARE_ENABLE_UFSD/d' .config
         #########################################################################################
         sudo ./clear_tree
         sudo ./build_firmware_modify $TNAME 0
