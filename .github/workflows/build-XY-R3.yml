@@ -1,4 +1,4 @@
-name: Build Padavan
+name: Build XY-R3
 
 on: 
   release:
