@@ -101,12 +101,12 @@ jobs:
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_SMBD36/d' .config
         sed -i '/CONFIG_FIRMWARE_INCLUDE_FTPD/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_SFTP/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_EAP_PEAP/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSH/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_XUPNPD/d' .config
-        sed -i '/CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW/d' .config
+        #sed -i '/CONFIG_FIRMWARE_INCLUDE_SFTP/d' .config
+        #sed -i '/CONFIG_FIRMWARE_INCLUDE_EAP_PEAP/d' .config
+        #sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSH/d' .config
+        #sed -i '/CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC/d' .config
+        #sed -i '/CONFIG_FIRMWARE_INCLUDE_XUPNPD/d' .config
+        #sed -i '/CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW/d' .config
         sed -i '/CONFIG_FIRMWARE_ENABLE_FUSE/d' .config
         sed -i '/CONFIG_FIRMWARE_ENABLE_EXT4/d' .config
         sed -i '/CONFIG_FIRMWARE_ENABLE_EXT3/d' .config
